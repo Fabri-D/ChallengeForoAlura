@@ -1,0 +1,26 @@
+spring:
+  profile.active: dev
+  datasource:
+    url: jdbc:mysql://localhost/foro_alura_api
+    username: root
+    password: goldmountain
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        ddl-auto: update
+component-scan:
+  base-packages: alura.foro.api
+
+debug: true
+
+
+
+
+#server:
+#  error:
+#    include-stacktrace: never
+api:
+  security:
+    secret: ${JWT_SECRET:123456}
