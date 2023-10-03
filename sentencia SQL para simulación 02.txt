@@ -1,0 +1,193 @@
+-- Crear 11 nuevos tópicos
+INSERT INTO topicos (titulo, mensaje, fecha_creacion, status, usuario_id, curso_id) VALUES
+('Problemas con Java', 'Necesito ayuda para resolver problemas al compilar mi código Java. ¿Alguien puede brindarme asistencia?', NOW(), 'NO_RESPONDIDO', 1, 1),
+('Errores en HTML', 'Mi página web HTML no se muestra correctamente en algunos navegadores. ¿Alguna idea de qué está sucediendo?', DATE_ADD(NOW(), INTERVAL 9 HOUR), 'NO_RESPONDIDO', 2, 2),
+('Consultas SQL', 'Me encuentro con la necesidad de realizar una consulta SQL compleja y no sé por dónde comenzar. ¿Alguien podría orientarme?', DATE_ADD(NOW(), INTERVAL 17 HOUR), 'NO_RESPONDIDO', 3, 3),
+('Algoritmo de búsqueda en Python', 'Estoy trabajando en un proyecto de búsqueda en Python y requiero ayuda para mejorar la eficiencia de mi algoritmo. ¿Alguna sugerencia?', DATE_ADD(NOW(), INTERVAL 19 HOUR), 'NO_RESPONDIDO', 4, 4),
+('Estilos CSS', 'Deseo cambiar el diseño de mi sitio web utilizando CSS, pero no estoy seguro de cómo empezar. ¿Tienen alguna recomendación?', DATE_ADD(NOW(), INTERVAL 23 HOUR), 'NO_RESPONDIDO', 5, 2),
+('Estructuras de Datos en C++', 'Estoy estudiando Estructuras de Datos en C++ y tengo algunas dudas sobre árboles binarios. ¿Alguien podría proporcionar una explicación?', DATE_ADD(NOW(), INTERVAL 27 HOUR), 'NO_RESPONDIDO', 6, 4),
+('Desarrollo Web Avanzado', '¿Alguien está interesado en discutir temas avanzados de desarrollo web, como React y Node.js? Compartamos conocimientos.', DATE_ADD(NOW(), INTERVAL 31 HOUR), 'NO_RESPONDIDO', 7, 2),
+('Problemas con Python', 'Enfrento un error extraño al ejecutar mi código Python. ¿Tienen alguna idea de qué podría estar ocurriendo?', DATE_ADD(NOW(), INTERVAL 35 HOUR), 'NO_RESPONDIDO', 8, 1),
+('Diseño UX/UI', '¿Cómo puedo mejorar la experiencia de usuario (UX) en mi sitio web? ¿Algún consejo sobre diseño de interfaz de usuario (UI)?', DATE_ADD(NOW(), INTERVAL 37 HOUR), 'NO_RESPONDIDO', 9, 2),
+('Seguridad en Aplicaciones Web', 'Estoy preocupado por la seguridad de mi aplicación web. ¿Qué medidas debo tomar para protegerla contra ataques?', DATE_ADD(NOW(), INTERVAL 41 HOUR), 'NO_RESPONDIDO', 10, 4),
+('Frameworks JavaScript', '¿Cuál es el framework de JavaScript más recomendado para el desarrollo web en la actualidad? Compartamos opiniones.', DATE_ADD(NOW(), INTERVAL 45 HOUR), 'NO_RESPONDIDO', 1, 2);
+
+
+-- Respuestas para los tópicos (entre 4 y 8 respuestas por tópico, excepto en uno con 2 respuestas)
+-- Tópico 8
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('Claro, puedo ayudarte con Java. Por favor, proporciona más detalles sobre tu problema.', DATE_ADD(NOW(), INTERVAL 1 HOUR), 8, 1, false),
+('También tuve algunos problemas con Java en el pasado. ¿Puedo ver tu código para entender mejor el problema?', DATE_ADD(NOW(), INTERVAL 2 HOUR), 8, 2, false),
+('Java es un lenguaje interesante. Si compartes tu código, estaré encantado de ayudarte.', DATE_ADD(NOW(), INTERVAL 3 HOUR), 8, 3, false),
+('He trabajado mucho con Java. ¿Puedo ver el código que estás intentando compilar?', DATE_ADD(NOW(), INTERVAL 4 HOUR), 8, 4, false),
+('¡Claro! Java es genial. Por favor, muéstranos tu código y veremos cómo podemos solucionarlo.', DATE_ADD(NOW(), INTERVAL 5 HOUR), 8, 5, false),
+('Java puede ser complicado a veces. ¿Has revisado los errores en tu código? ¡Estaré encantado de ayudarte!', DATE_ADD(NOW(), INTERVAL 6 HOUR), 8, 6, false),
+('Para ayudarte con Java, necesitaré más información. ¿Puedes proporcionar detalles sobre el error que estás experimentando?', DATE_ADD(NOW(), INTERVAL 7 HOUR), 8, 7, false),
+('Java puede ser un desafío, pero estoy seguro de que podemos resolver tus problemas. Por favor, comparte tu código.', DATE_ADD(NOW(), INTERVAL 8 HOUR), 8, 8, false),
+('Java es un lenguaje poderoso. ¿Puedes describir el problema que estás enfrentando?', DATE_ADD(NOW(), INTERVAL 9 HOUR), 8, 1, false);
+
+-- Tópico 9
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('He tenido problemas con HTML en el pasado. ¿Puedes proporcionar más detalles sobre tu sitio web y los navegadores con los que tienes problemas?', DATE_ADD(NOW(), INTERVAL 10 HOUR), 9, 4, false),
+('HTML puede ser complicado cuando se trata de la compatibilidad entre navegadores. ¿Puedes compartir el código HTML en cuestión?', DATE_ADD(NOW(), INTERVAL 11 HOUR), 9, 3, false),
+('Estoy dispuesto a ayudarte con HTML. ¿Puedes decirme qué navegadores están causando problemas?', DATE_ADD(NOW(), INTERVAL 12 HOUR), 9, 2, false),
+('HTML es un mundo. ¿Puedes proporcionar más detalles sobre los problemas que estás enfrentando?', DATE_ADD(NOW(), INTERVAL 13 HOUR), 9, 1, false),
+('La compatibilidad de navegadores es un desafío común en HTML. ¿Has probado algún enfoque específico para solucionarlo?', DATE_ADD(NOW(), INTERVAL 14 HOUR), 9, 5, false),
+('Si compartes más detalles sobre tu página web y los problemas específicos, podremos brindarte asesoramiento más preciso.', DATE_ADD(NOW(), INTERVAL 15 HOUR), 9, 6, false),
+('HTML puede ser complicado de depurar en diferentes navegadores. ¿Puedes proporcionar más detalles?', DATE_ADD(NOW(), INTERVAL 16 HOUR), 9, 7, false),
+('Estoy dispuesto a ayudarte con HTML. ¿Puedes proporcionar información adicional sobre los problemas que estás enfrentando?', DATE_ADD(NOW(), INTERVAL 17 HOUR), 9, 8, false);
+
+-- Tópico 10 (Solo 2 respuestas)
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('Claro, puedo ayudarte con las consultas SQL. Por favor, proporciona más detalles sobre tu consulta.', DATE_ADD(NOW(), INTERVAL 18 HOUR), 10, 8, false),
+('Las consultas SQL pueden ser un desafío. ¿Puedes compartir la estructura de tus tablas y la consulta que deseas realizar?', DATE_ADD(NOW(), INTERVAL 19 HOUR), 10, 7, false);
+
+
+-- Tópico 11
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('El algoritmo de búsqueda en Python es una parte fundamental de la programación. ¿Puedes compartir tu código actual para que podamos ayudarte a mejorarlo?', DATE_ADD(NOW(), INTERVAL 20 HOUR), 11, 6, false),
+('Python es un gran lenguaje para algoritmos de búsqueda. ¿En qué parte específica necesitas ayuda?', DATE_ADD(NOW(), INTERVAL 21 HOUR), 11, 5, false),
+('El algoritmo de búsqueda depende del contexto y de los datos que estás tratando de buscar. ¿Puedes proporcionar más información sobre tu proyecto?', DATE_ADD(NOW(), INTERVAL 22 HOUR), 11, 4, false),
+('La eficiencia en los algoritmos de búsqueda es crucial. ¿Puedes compartir tu código actual?', DATE_ADD(NOW(), INTERVAL 23 HOUR), 11, 3, false);
+
+-- Tópico 12
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('Cambiar el diseño de un sitio web con CSS puede ser emocionante. ¿Tienes alguna idea específica en mente o necesitas inspiración?', DATE_ADD(NOW(), INTERVAL 24 HOUR), 12, 2, false),
+('Los estilos CSS pueden hacer que un sitio web se vea increíble. ¿Tienes un diseño en mente que te gustaría lograr?', DATE_ADD(NOW(), INTERVAL 25 HOUR), 12, 3, false),
+('Me encantaría ayudarte con CSS. ¿Tienes alguna preferencia de diseño o ejemplos de lo que te gustaría lograr?', DATE_ADD(NOW(), INTERVAL 26 HOUR), 12, 4, false),
+('CSS ofrece muchas posibilidades para el diseño web. ¿En qué aspecto específico necesitas ayuda?', DATE_ADD(NOW(), INTERVAL 27 HOUR), 12, 5, false);
+
+-- Tópico 13
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('Las estructuras de datos son fundamentales en programación. ¿Puedes especificar qué tipo de árboles binarios estás estudiando?', DATE_ADD(NOW(), INTERVAL 28 HOUR), 13, 5, false),
+('Los árboles binarios son una parte importante de las estructuras de datos. ¿Tienes alguna pregunta específica sobre su implementación o uso?', DATE_ADD(NOW(), INTERVAL 29 HOUR), 13, 4, false),
+('Estructuras de Datos es un tema amplio. ¿En qué parte de los árboles binarios necesitas orientación?', DATE_ADD(NOW(), INTERVAL 30 HOUR), 13, 3, false),
+('Los árboles binarios pueden ser desafiantes. ¿Qué problemas específicos estás encontrando?', DATE_ADD(NOW(), INTERVAL 31 HOUR), 13, 2, false);
+
+-- Tópico 14
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('El desarrollo web avanzado ofrece muchas oportunidades. ¿Tienes alguna pregunta o tema específico que te gustaría discutir?', DATE_ADD(NOW(), INTERVAL 32 HOUR), 14, 3, false),
+('El desarrollo web avanzado es un tema emocionante. ¿Tienes proyectos o tecnologías específicas en mente?', DATE_ADD(NOW(), INTERVAL 33 HOUR), 14, 4, false),
+('El desarrollo web avanzado abarca muchas áreas. ¿En qué parte necesitas orientación o discusión?', DATE_ADD(NOW(), INTERVAL 34 HOUR), 14, 5, false),
+('Estoy interesado en discutir temas avanzados de desarrollo web. ¿Cuál es tu enfoque o pregunta?', DATE_ADD(NOW(), INTERVAL 35 HOUR), 14, 6, false);
+
+-- Tópico 15
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('Python es un lenguaje poderoso, pero los errores pueden ser frustrantes. ¿Puedes proporcionar más información sobre el error que estás experimentando?', DATE_ADD(NOW(), INTERVAL 36 HOUR), 15, 7, false),
+('Los problemas en Python pueden ser desafiantes. ¿Has intentado depurar el código para encontrar el origen del error?', DATE_ADD(NOW(), INTERVAL 37 HOUR), 15, 8, false);
+
+-- Tópico 16
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('La experiencia de usuario (UX) y el diseño de interfaz de usuario (UI) son aspectos clave para un sitio web. ¿En qué área necesitas asesoramiento?', DATE_ADD(NOW(), INTERVAL 38 HOUR), 16, 8, false),
+('La mejora de la UX/UI es esencial. ¿Tienes algún diseño actual en mente que quieras mejorar?', DATE_ADD(NOW(), INTERVAL 39 HOUR), 16, 7, false),
+('El diseño de la UX/UI puede marcar la diferencia en un sitio web. ¿Tienes algún proyecto específico en el que necesites ayuda?', DATE_ADD(NOW(), INTERVAL 40 HOUR), 16, 6, false),
+('La UX/UI es un aspecto fundamental. ¿Tienes alguna pregunta o área en la que necesites orientación?', DATE_ADD(NOW(), INTERVAL 41 HOUR), 16, 5, false);
+
+-- Tópico 17
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('La seguridad en las aplicaciones web es crítica. ¿Qué tipo de aplicación estás desarrollando y qué medidas de seguridad has considerado hasta ahora?', DATE_ADD(NOW(), INTERVAL 42 HOUR), 17, 4, false),
+('La seguridad es una preocupación importante en las aplicaciones web. ¿Has evaluado las posibles vulnerabilidades y amenazas?', DATE_ADD(NOW(), INTERVAL 43 HOUR), 17, 3, false),
+('La seguridad en las aplicaciones web es un tema clave. ¿En qué parte necesitas orientación o consejos?', DATE_ADD(NOW(), INTERVAL 44 HOUR), 17, 2, false),
+('La seguridad en las aplicaciones web es esencial. ¿Tienes alguna pregunta o inquietud específica?', DATE_ADD(NOW(), INTERVAL 45 HOUR), 17, 1, false);
+
+-- Tópico 18
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('Los frameworks de JavaScript son herramientas poderosas para el desarrollo web. ¿En qué contexto específico estás buscando recomendaciones?', DATE_ADD(NOW(), INTERVAL 46 HOUR), 18, 1, false),
+('Los frameworks de JavaScript ofrecen muchas posibilidades. ¿Puedes proporcionar más detalles sobre tu proyecto o necesidades?', DATE_ADD(NOW(), INTERVAL 47 HOUR), 18, 2, false),
+('El uso de frameworks de JavaScript puede acelerar el desarrollo web. ¿Tienes alguna preferencia o necesitas ayuda para elegir uno?', DATE_ADD(NOW(), INTERVAL 48 HOUR), 18, 3, false),
+('Los frameworks de JavaScript son una parte esencial del desarrollo web moderno. ¿Tienes alguna pregunta o área en la que necesites orientación?', DATE_ADD(NOW(), INTERVAL 49 HOUR), 18, 4, false);
+
+
+
+
+-- Tópico 22 (Vacío)
+
+
+
+-- Asignación de autores a tópicos
+UPDATE topicos SET usuario_id = 8 WHERE id = 8;
+UPDATE topicos SET usuario_id = 4 WHERE id = 10;
+UPDATE topicos SET usuario_id = 6 WHERE id = 11;
+UPDATE topicos SET usuario_id = 2 WHERE id = 12;
+UPDATE topicos SET usuario_id = 3 WHERE id = 13;
+UPDATE topicos SET usuario_id = 7 WHERE id = 14;
+UPDATE topicos SET usuario_id = 1 WHERE id = 15;
+UPDATE topicos SET usuario_id = 5 WHERE id = 16;
+UPDATE topicos SET usuario_id = 4 WHERE id = 17;
+UPDATE topicos SET usuario_id = 8 WHERE id = 18;
+UPDATE topicos SET usuario_id = 5 WHERE id = 21;
+
+-- Asignación de autores a respuestas
+-- Tópico 8
+UPDATE respuestas SET usuario_id = 1 WHERE id = 1;
+UPDATE respuestas SET usuario_id = 2 WHERE id = 2;
+UPDATE respuestas SET usuario_id = 3 WHERE id = 3;
+UPDATE respuestas SET usuario_id = 4 WHERE id = 4;
+UPDATE respuestas SET usuario_id = 5 WHERE id = 5;
+UPDATE respuestas SET usuario_id = 6 WHERE id = 6;
+UPDATE respuestas SET usuario_id = 7 WHERE id = 7;
+UPDATE respuestas SET usuario_id = 8 WHERE id = 8;
+
+-- Tópico 9
+UPDATE respuestas SET usuario_id = 4 WHERE id = 9;
+UPDATE respuestas SET usuario_id = 3 WHERE id = 10;
+UPDATE respuestas SET usuario_id = 2 WHERE id = 11;
+UPDATE respuestas SET usuario_id = 1 WHERE id = 12;
+UPDATE respuestas SET usuario_id = 5 WHERE id = 13;
+UPDATE respuestas SET usuario_id = 6 WHERE id = 14;
+UPDATE respuestas SET usuario_id = 7 WHERE id = 15;
+UPDATE respuestas SET usuario_id = 8 WHERE id = 16;
+
+-- Tópico 10
+UPDATE respuestas SET usuario_id = 8 WHERE id = 17;
+UPDATE respuestas SET usuario_id = 7 WHERE id = 18;
+
+-- Tópico 11
+UPDATE respuestas SET usuario_id = 6 WHERE id = 19;
+UPDATE respuestas SET usuario_id = 5 WHERE id = 20;
+UPDATE respuestas SET usuario_id = 4 WHERE id = 21;
+UPDATE respuestas SET usuario_id = 3 WHERE id = 22;
+
+-- Tópico 12
+UPDATE respuestas SET usuario_id = 2 WHERE id = 23;
+UPDATE respuestas SET usuario_id = 3 WHERE id = 24;
+UPDATE respuestas SET usuario_id = 4 WHERE id = 25;
+UPDATE respuestas SET usuario_id = 5 WHERE id = 26;
+
+-- Tópico 13
+UPDATE respuestas SET usuario_id = 5 WHERE id = 27;
+UPDATE respuestas SET usuario_id = 4 WHERE id = 28;
+UPDATE respuestas SET usuario_id = 3 WHERE id = 29;
+UPDATE respuestas SET usuario_id = 2 WHERE id = 30;
+
+-- Tópico 14
+UPDATE respuestas SET usuario_id = 3 WHERE id = 31;
+UPDATE respuestas SET usuario_id = 4 WHERE id = 32;
+UPDATE respuestas SET usuario_id = 5 WHERE id = 33;
+UPDATE respuestas SET usuario_id = 6 WHERE id = 34;
+
+-- Tópico 15
+UPDATE respuestas SET usuario_id = 7 WHERE id = 35;
+UPDATE respuestas SET usuario_id = 8 WHERE id = 36;
+
+-- Tópico 16
+UPDATE respuestas SET usuario_id = 8 WHERE id = 37;
+UPDATE respuestas SET usuario_id = 7 WHERE id = 38;
+UPDATE respuestas SET usuario_id = 6 WHERE id = 39;
+UPDATE respuestas SET usuario_id = 5 WHERE id = 40;
+
+-- Tópico 17
+UPDATE respuestas SET usuario_id = 4 WHERE id = 41;
+UPDATE respuestas SET usuario_id = 3 WHERE id = 42;
+UPDATE respuestas SET usuario_id = 2 WHERE id = 43;
+UPDATE respuestas SET usuario_id = 1 WHERE id = 44;
+
+-- Tópico 18
+UPDATE respuestas SET usuario_id = 1 WHERE id = 45;
+UPDATE respuestas SET usuario_id = 2 WHERE id = 46;
+UPDATE respuestas SET usuario_id = 3 WHERE id = 47;
+UPDATE respuestas SET usuario_id = 4 WHERE id = 48;
+
+-- Tópico 22 (Vacío)
+
+COMMIT;

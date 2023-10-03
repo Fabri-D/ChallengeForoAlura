@@ -12,5 +12,4 @@ public interface CursoRepository extends JpaRepository<Curso, Long> {
     
     Curso findByNombre(String nombre);
 
-    //Boolean existsByMedicoIdAndFecha(Long idMedico, LocalDateTime fecha);
 }

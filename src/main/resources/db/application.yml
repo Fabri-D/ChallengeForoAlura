@@ -3,7 +3,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost/foro_alura_api
     username: root
-    password: goldmountain
+    password: 1234
   jpa:
     show-sql: true
     properties:

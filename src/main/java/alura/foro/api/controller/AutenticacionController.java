@@ -25,7 +25,6 @@ import alura.foro.api.infra.security.TokenService;
 import alura.foro.api.domain.usuarios.Usuario;
 
 
-
 @RestController
 @RequestMapping("/login")
 public class AutenticacionController {

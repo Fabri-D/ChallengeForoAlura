@@ -24,8 +24,6 @@ public class SecurityConfigurations {
     @Autowired
     private SecurityFilter securityFilter;
     
-    @Value("${api.security.secret}")
-    private String jwtSecret;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {

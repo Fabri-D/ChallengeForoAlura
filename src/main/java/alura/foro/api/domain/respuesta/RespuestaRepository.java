@@ -15,5 +15,7 @@ public interface RespuestaRepository extends JpaRepository<Respuesta, Long> {
 	// Método personalizado para buscar respuestas por ID de Tópico
     @Query("SELECT r FROM Respuesta r WHERE r.topico.id = :idTopico")
     List<Respuesta> findByTopicoId(@Param("idTopico") Long idTopico);
+
+	
 	
 }

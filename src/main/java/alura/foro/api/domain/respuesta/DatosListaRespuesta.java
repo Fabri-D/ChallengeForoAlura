@@ -1,6 +1,7 @@
 package alura.foro.api.domain.respuesta;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import alura.foro.api.domain.topico.Topico;
 import alura.foro.api.domain.usuarios.Usuario;
@@ -11,5 +12,7 @@ public record DatosListaRespuesta(Long id, String mensaje, LocalDateTime fechaCr
 		this(respuesta.getId(), respuesta.getMensaje(), respuesta.getFechaCreacion(),
 				respuesta.getAutor().getLogin(), respuesta.getSolucion());
 	}
+
+	
 
 }

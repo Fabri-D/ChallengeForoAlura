@@ -29,11 +29,6 @@ import alura.foro.api.domain.curso.DatosListaCurso;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 
-
-
-
-
-
 @RestController
 @SecurityRequirement(name = "bearer-key")
 @RequestMapping("/cursos")
@@ -67,7 +62,7 @@ public class CursoController {
     }
     
     @GetMapping
-    public ResponseEntity<Page<DatosListaCurso>> listar(@PageableDefault(size = 10, sort = {"nombre"}) Pageable paginacion) {
+    public ResponseEntity<Page<DatosListaCurso>> listar(@PageableDefault(size = 10, sort = {"id"}) Pageable paginacion) {
     	var page = repository.findAll(paginacion).map(DatosListaCurso::new);
         return ResponseEntity.ok(page);
     }

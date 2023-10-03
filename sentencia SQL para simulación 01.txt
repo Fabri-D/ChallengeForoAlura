@@ -1,0 +1,58 @@
+-- Usuarios
+INSERT INTO usuarios (login, email, clave) VALUES
+('Mario', 'mario@example.com', '$2a$12$V2Pxd5ewcUIyPh5/WmRJ2Ondhh7rJLB0M4BdxEJLVdaJ9tIH6LyXq'),
+('Carla', 'carla@example.com', '$2a$12$V2Pxd5ewcUIyPh5/WmRJ2Ondhh7rJLB0M4BdxEJLVdaJ9tIH6LyXq'),
+('Nunzio', 'nunzio@example.com', '$2a$12$V2Pxd5ewcUIyPh5/WmRJ2Ondhh7rJLB0M4BdxEJLVdaJ9tIH6LyXq'),
+('Marco', 'marco@example.com', '$2a$12$V2Pxd5ewcUIyPh5/WmRJ2Ondhh7rJLB0M4BdxEJLVdaJ9tIH6LyXq'),
+('Natalia', 'natalia@example.com', '$2a$12$V2Pxd5ewcUIyPh5/WmRJ2Ondhh7rJLB0M4BdxEJLVdaJ9tIH6LyXq'),
+('Tiago', 'tiago@example.com', '$2a$12$V2Pxd5ewcUIyPh5/WmRJ2Ondhh7rJLB0M4BdxEJLVdaJ9tIH6LyXq'),
+('Miguel', 'miguel@example.com', '$2a$12$V2Pxd5ewcUIyPh5/WmRJ2Ondhh7rJLB0M4BdxEJLVdaJ9tIH6LyXq'),
+('Analía', 'analia@example.com', '$2a$12$V2Pxd5ewcUIyPh5/WmRJ2Ondhh7rJLB0M4BdxEJLVdaJ9tIH6LyXq'),
+('Horacio', 'horacio@example.com', '$2a$12$V2Pxd5ewcUIyPh5/WmRJ2Ondhh7rJLB0M4BdxEJLVdaJ9tIH6LyXq'),
+('Gonzalo', 'gonzalo@example.com', '$2a$12$V2Pxd5ewcUIyPh5/WmRJ2Ondhh7rJLB0M4BdxEJLVdaJ9tIH6LyXq');
+
+-- Cursos
+INSERT INTO cursos (nombre, categoria) VALUES
+('Introducción a la Programación', 'Programación'),
+('Desarrollo Web', 'Programación'),
+('Bases de Datos', 'Programación'),
+('Algoritmos y Estructuras de Datos', 'Programación');
+
+-- Tópicos
+INSERT INTO topicos (titulo, mensaje, fecha_creacion, status, usuario_id, curso_id) VALUES
+('Ayuda con Java', '¿Alguien puede ayudarme con Java?', NOW(), 'NO_RESPONDIDO', 1, 1),
+('Problemas con HTML', 'Tengo problemas con mi página web en HTML', NOW(), 'NO_RESPONDIDO', 2, 2),
+('Consulta sobre SQL', 'Necesito ayuda con consultas SQL', NOW(), 'NO_RESPONDIDO', 3, 3),
+('Algoritmo de búsqueda', '¿Cuál es el mejor algoritmo de búsqueda?', NOW(), 'NO_RESPONDIDO', 4, 4),
+('Dudas sobre CSS', 'Tengo dudas sobre estilos CSS', NOW(), 'NO_RESPONDIDO', 5, 2),
+('Estructuras de Datos', 'Hablemos sobre estructuras de datos', NOW(), 'NO_RESPONDIDO', 6, 4),
+('Desarrollo Web Avanzado', 'Discutamos temas avanzados de desarrollo web', NOW(), 'NO_RESPONDIDO', 7, 2);
+
+-- Respuestas
+INSERT INTO respuestas (mensaje, fecha_creacion, topico_id, usuario_id, solucion) VALUES
+('Sí, puedo ayudarte con Java. ¿Cuál es tu pregunta?', NOW(), 1, 4, false),
+('También tengo problemas con HTML. ¡Unamos fuerzas!', NOW(), 2, 3, false),
+('Para consultas SQL, ¡estoy aquí para ayudarte!', NOW(), 3, 6, false),
+('El mejor algoritmo de búsqueda depende del contexto...', NOW(), 4, 5, false),
+('¿Qué dudas tienes sobre CSS? Pregunta lo que quieras.', NOW(), 5, 7, false),
+('Las estructuras de datos son fundamentales en programación.', NOW(), 6, 2, false),
+('¡El desarrollo web avanzado es emocionante! Hablemos de ello.', NOW(), 7, 1, false);
+
+-- Asignación de autores a tópicos
+UPDATE topicos SET usuario_id = 1 WHERE id = 1;
+UPDATE topicos SET usuario_id = 2 WHERE id = 2;
+UPDATE topicos SET usuario_id = 3 WHERE id = 3;
+UPDATE topicos SET usuario_id = 4 WHERE id = 4;
+UPDATE topicos SET usuario_id = 5 WHERE id = 5;
+UPDATE topicos SET usuario_id = 6 WHERE id = 6;
+UPDATE topicos SET usuario_id = 7 WHERE id = 7;
+
+-- Asignación de autores a respuestas
+UPDATE respuestas SET usuario_id = 4 WHERE id = 1;
+UPDATE respuestas SET usuario_id = 3 WHERE id = 2;
+UPDATE respuestas SET usuario_id = 6 WHERE id = 3;
+UPDATE respuestas SET usuario_id = 5 WHERE id = 4;
+UPDATE respuestas SET usuario_id = 7 WHERE id = 5;
+UPDATE respuestas SET usuario_id = 2 WHERE id = 6;
+UPDATE respuestas SET usuario_id = 1 WHERE id = 7;
+
