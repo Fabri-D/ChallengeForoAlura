@@ -1,4 +1,4 @@
-# **Challenge Hotel Alura**
+# **Challenge Foro Alura**
 
 <p align="center" >
      
