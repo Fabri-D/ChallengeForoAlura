@@ -1,4 +1,4 @@
-# **Challenge Foro Alura**
+# **Challenge Hotel Alura**
 
 <p align="center" >
      
@@ -8,4 +8,4 @@ El repositorio contiene un video explicativo donde se explayan las funcionalidad
 
 <p align="center" >
      
-</p>
+</p></br>
